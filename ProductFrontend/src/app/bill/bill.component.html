@@ -1,0 +1,22 @@
+<div class="container-md">
+  <div class="card">
+    <div class="card-header bg-primary">
+      <h5 class="card-title"><font color="white">Liste des factures</font></h5>
+    </div>
+    <div class="card-body">
+      <table *ngIf="facture" class="table table-sm">
+        <tr>
+          <th>ID</th><th>NOM</th><th>PRIX</th><th>QUANTITE</th>
+        </tr>
+        <tr *ngFor="let f of facture.content">
+          <td>{{f.id}}</td>
+          <td>{{f.name}}</td>
+          <td>{{f.price}}</td>
+          <td>{{f.quantity}}</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+
